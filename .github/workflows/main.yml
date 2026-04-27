@@ -6,7 +6,7 @@ on:
         runs-on: ubuntu-latest
 
         steps:
-          - name: 1. pegar chassi do carro (codigo-fonte)branches-ignore: 
+          - name: 1. pegar chassi do carro (codigo-fonte): 
             uses: actions/chekut@v3
 
           - name: 2. estação de bild (montagem)
