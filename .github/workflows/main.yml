@@ -1,23 +1,22 @@
-name: minha primeira linha de montagem
+name: Minha Primeira Linha de Montagem
 
 on:
-    push:
-        branches: [ main ]
-        
-        jobs:
-         bildi-e-teste:
-          runs-on: ubuntu-latest
+  push:
+    branches: [ main ]
 
-        steps:
-          - name: 1. Pegar chassi do carro (codigo-fonte): 
-            uses: actions/chekut@v3
+jobs:
+  build-e-teste:
+    runs-on: ubuntu-latest
 
-          - name: 2. estação de bild (montagem)
-            run: echo "comstruindo o projeto...varificando se todas as peças se encaixão"
+    steps:
+      - name: 1. Pegar o chassi do carro (código-fonte)
+        uses: actions/checkout@v3
 
-          - name: 3. estação de teste (controle de qualidade)
-            run: echo "rodando os testes automatizados...verificando se a porta abre e fecha"
-           
+      - name: 2. Estação de Build (Montagem)
+        run: echo "Construindo o projeto... Verificando se todas as peças se encaixam!"
+
+      - name: 3. Estação de Teste (Controle de Qualidade)
+        run: echo "Rodando os testes automatizados... Verificando se a porta abre e fecha!"
 
 
 
