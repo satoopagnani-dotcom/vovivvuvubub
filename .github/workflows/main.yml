@@ -3,10 +3,13 @@ name: minha primeira linha de montagem
 on:
     push:
         branches: [ main ]
-        runs-on: ubuntu-latest
+        
+        jobs:
+         bildi-e-teste:
+          runs-on: ubuntu-latest
 
         steps:
-          - name: 1. pegar chassi do carro (codigo-fonte): 
+          - name: 1. Pegar chassi do carro (codigo-fonte): 
             uses: actions/chekut@v3
 
           - name: 2. estação de bild (montagem)
